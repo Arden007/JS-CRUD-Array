@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Anime List</h1>
+    <form action="javascript:void(0);" onsubmit="addAnime()">
+      <input type="text" id="add-name" placeholder="Add New Anime" required />
+      <input type="text" id="add-genre" placeholder="Add New Genre" required />
+      <input type="submit" value="Add" />
+    </form>
+
+    <div id="editForm">
+      <form action="javascript:void(0);" id="saveEdit">
+        <input type="text" id="edit-name" />
+        <input type="text" id="edit-genre" />
+        <input type="submit" value="Edit" />
+        <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+      </form>
+    </div>
+
+    <p id="count"></p>
+
+    <table>
+      <tr>
+        <th id="name">Anime Name:</th>
+      </tr>
+      <tbody id="anime"></tbody>
+    </table>
+
+    <script src="/json.js"></script>
+  </body>
+</html>
